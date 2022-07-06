@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+{% block title %}NGUOI DUNG{% endblock %}
+
+  {% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for m in messages %}
+                <p>{{m}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+        <h2>Hello em {{ user }}</h2>
+
+        <div style="margin-left: 50px;">
+          <form action="#" method="post">
+              <label for="email">Email</label>
+
+              <input type="email" name="email" placeholder="Enter email..." value="{{ email if email }}"></input>
+
+             <button style="background-color: red; color: blue; " type="submit">Submit</button> <br>
+
+               <input type="name" name="name" placeholder="Enter name..." value="{{ name if name }}"></input>
+
+             <button style="background-color: red; color: blue; " type="submit">Delete</button>
+          </form>
+
+        </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'layout/base.html' %}
+{% block title %}ADMIN{% endblock %}
+  {% block content %}
+        <h1>{{text}}</h1>
+        {% for x in cars %}
+            <h2 style="color: red;" >{{ x }}</h2>
+        {% endfor %}
+    {% endblock %}
