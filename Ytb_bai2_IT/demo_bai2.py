@@ -31,7 +31,7 @@ class User(db.Model):
         self.name = name
         self.email = email
 
-
+# ok ne nha
 @app.route('/ok')
 def home():
     return render_template("layout/home.html")
